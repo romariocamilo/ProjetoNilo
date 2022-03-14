@@ -1,9 +1,11 @@
 ﻿using System.Linq;
+
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using ProjetoNilo.Uteis;
 using TechTalk.SpecFlow;
+
+using ProjetoNilo.Uteis;
+
 
 namespace ProjetoNilo.Auxiliares
 {
