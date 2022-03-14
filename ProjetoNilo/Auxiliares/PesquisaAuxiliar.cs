@@ -12,7 +12,7 @@ namespace ProjetoNilo.Auxiliares
     [Binding]
     public class PesquisaAuxiliar
     {
-        private ChromeDriver _chromeDriver;
+        public static ChromeDriver _chromeDriver;
         private List<string> _resultadoPesquisaPorProduto;
         private List<Produto> _resultadoPesquisaPorProdutoViaSubMenu;
         private string _resultadoMensagemDeErro;
