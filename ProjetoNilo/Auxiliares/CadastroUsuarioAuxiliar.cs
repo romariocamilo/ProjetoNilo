@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 using ProjetoNilo.Uteis;
-
+using SeleniumExtras.WaitHelpers;
 
 namespace ProjetoNilo.Auxiliares
 {
@@ -24,8 +24,8 @@ namespace ProjetoNilo.Auxiliares
         [When(@"eu clicar no menu My Account")]
         public void WhenEuClicarNoMenuMyAccount()
         {
-            var listaDeProdutosDaConsulta = PesquisaAuxiliar._chromeDriver.FindElement(By.Id("menu-item-50"));
-            listaDeProdutosDaConsulta.Click();
+            var submenuMinhaConta  = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Id("menu-item-50")));
+            submenuMinhaConta.Click();
         }
 
 
@@ -33,36 +33,38 @@ namespace ProjetoNilo.Auxiliares
         [When(@"preencher o campo email Email address")]
         public void WhenPreencherOCampoEmail()
         {
-            var listaDeProdutosDaConsulta = PesquisaAuxiliar._chromeDriver.FindElement(By.Id("reg_email"));
-            listaDeProdutosDaConsulta.SendKeys(_emailUsuario);
+            var cpEmail = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Id("reg_email")));
+            cpEmail.SendKeys(_emailUsuario);
         }
 
 
         [When(@"preencher o campo password Password")]
         public void WhenPreencherOCampoPassword()
         {
-            var listaDeProdutosDaConsulta = PesquisaAuxiliar._chromeDriver.FindElement(By.Id("reg_password"));
-            listaDeProdutosDaConsulta.SendKeys(_emailUsuario);
+            var cpSenha = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Id("reg_password")));
+
+            cpSenha.SendKeys(_emailUsuario);
         }
 
 
         [When(@"clicar no botão REGISTER")]
         public void WhenClicarNoBotao()
         {
-            var listaDeProdutosDaConsulta = PesquisaAuxiliar._chromeDriver.FindElement(By.Name("register"));
-            listaDeProdutosDaConsulta.Click();
+            var btnRegistrar = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Name("register")));
+
+            btnRegistrar.Click();
         }
 
         [Then(@"o sistema exibe a mensagem '([^']*)'")]
         public void ThenOSistemaExibeAMensagem(string p0)
         {
-            var listaDeProdutosDaConsulta = PesquisaAuxiliar._chromeDriver.FindElements(By.TagName("p"));
             string fraseFormatada = string.Format(p0, _nomeUsuario);
-            var fraseDeCadastro = listaDeProdutosDaConsulta.FirstOrDefault(p => p.Text == string.Format(p0, _nomeUsuario));
 
-            if (fraseDeCadastro != null)
+            var stgFraseLogin = PesquisaAuxiliar.esperaImplicita.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='page-36']/div/div[1]/div/p[1]")));
+
+            if (stgFraseLogin != null)
             {
-                Assert.AreEqual(fraseFormatada, fraseDeCadastro.Text);
+                Assert.AreEqual(fraseFormatada, stgFraseLogin.Text);
             }
             else
             {
