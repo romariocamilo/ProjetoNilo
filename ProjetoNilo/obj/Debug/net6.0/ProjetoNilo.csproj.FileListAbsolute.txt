@@ -13,6 +13,7 @@ C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\ProjetoNilo.runtimeconfig.json
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\ProjetoNilo.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\ProjetoNilo.pdb
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\BoDi.dll
+C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\Gherkin.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
@@ -26,6 +27,7 @@ C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlat
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\nunit.framework.dll
+C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\WebDriver.Support.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\WebDriver.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\TechTalk.SpecFlow.dll
 C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0\SpecFlow.Internal.Json.dll
