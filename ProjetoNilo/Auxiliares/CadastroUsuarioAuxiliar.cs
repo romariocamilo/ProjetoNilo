@@ -6,6 +6,7 @@ using TechTalk.SpecFlow;
 
 using ProjetoNilo.Uteis;
 using SeleniumExtras.WaitHelpers;
+using System.Threading;
 
 namespace ProjetoNilo.Auxiliares
 {
@@ -43,6 +44,8 @@ namespace ProjetoNilo.Auxiliares
         {
             var cpSenha = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Id("reg_password")));
 
+            Thread.Sleep(3000);
+
             cpSenha.SendKeys(_emailUsuario + "nilo2022@@@");
         }
 
@@ -50,7 +53,7 @@ namespace ProjetoNilo.Auxiliares
         [When(@"clicar no botão REGISTER")]
         public void WhenClicarNoBotao()
         {
-            var btnRegistrar = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Name("register")));
+            var btnRegistrar = PesquisaAuxiliar.esperaImplicita.Until(ExpectedConditions.ElementToBeClickable(By.Name("register")));
 
             btnRegistrar.Click();
         }
