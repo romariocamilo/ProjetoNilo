@@ -35,9 +35,13 @@ Comando: cd C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0
 ### Passo 4:
 Já na pasta "net6.0" execute os comandos abaixo via CMD para execução dos testes
 
-Comando: git checkout master_execucao_local
+Comando para alterar a branch: git checkout master_execucao_local
 
-Comando: dotnet test ProjetoNilo.dll --logger "console;verbosity=detailed"
+Comando para listar os testes disponíveis: dotnet test ProjetoNilo.dll --list-tests
+
+![image](https://user-images.githubusercontent.com/40321935/158294258-871c7397-9c2e-4ec8-9558-e803dda26603.png)
+
+Comando para executar os testes: dotnet test ProjetoNilo.dll --logger "console;verbosity=detailed"
 
 Exemplo de saída:
 
