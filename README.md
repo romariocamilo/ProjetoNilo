@@ -8,6 +8,12 @@ Link para download: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 ![image](https://user-images.githubusercontent.com/40321935/158284097-dd717450-08c9-47a6-b57e-a051e2e932fc.png)
 
+Instale o Git de acordo com a versão local do S.O.
+Link para download: https://git-scm.com/downloads
+
+![image](https://user-images.githubusercontent.com/40321935/158291076-52b15de0-4af1-4ae7-b25c-fd4029e99f2a.png)
+
+
 ### Passo 2:
 Crie no Disco C(Raiz) uma pasta com nome "Nilo";
 
@@ -27,9 +33,15 @@ Acesse a pasta "net6.0" localizada no caminho "C:\Nilo\ProjetoNilo\ProjetoNilo\b
 Comando: cd C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0
 
 ### Passo 4:
-Já na pasta "net6.0" execute o comando abaixo via CMD para execução dos testes
+Já na pasta "net6.0" execute os comandos abaixo via CMD para execução dos testes
 
-Comando: dotnet test ProjetoNilo.dll --logger "console;verbosity=detailed"
+Comando para alterar a branch: git checkout master_execucao_local
+
+Comando para listar os testes disponíveis: dotnet test ProjetoNilo.dll --list-tests
+
+![image](https://user-images.githubusercontent.com/40321935/158294258-871c7397-9c2e-4ec8-9558-e803dda26603.png)
+
+Comando para executar os testes: dotnet test ProjetoNilo.dll --logger "console;verbosity=detailed"
 
 Exemplo de saída:
 
