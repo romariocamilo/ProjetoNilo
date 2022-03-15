@@ -58,14 +58,13 @@ namespace ProjetoNilo.Auxiliares
         [Then(@"o sistema exibe a mensagem '([^']*)'")]
         public void ThenOSistemaExibeAMensagem(string p0)
         {
-            var listaParagrafos = PesquisaAuxiliar.esperaImplicita.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.TagName("p")));
-
             string fraseFormatada = string.Format(p0, _nomeUsuario);
-            var elementoParagrafoObtido = listaParagrafos.FirstOrDefault(p => p.Text == string.Format(p0, _nomeUsuario));
 
-            if (elementoParagrafoObtido != null)
+            var stgFraseLogin = PesquisaAuxiliar.esperaImplicita.Until(ExpectedConditions.ElementExists(By.XPath("//*[@id='page-36']/div/div[1]/div/p[1]")));
+
+            if (stgFraseLogin != null)
             {
-                Assert.AreEqual(fraseFormatada, elementoParagrafoObtido.Text);
+                Assert.AreEqual(fraseFormatada, stgFraseLogin.Text);
             }
             else
             {
