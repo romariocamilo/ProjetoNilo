@@ -27,7 +27,9 @@ Acesse a pasta "net6.0" localizada no caminho "C:\Nilo\ProjetoNilo\ProjetoNilo\b
 Comando: cd C:\Nilo\ProjetoNilo\ProjetoNilo\bin\Debug\net6.0
 
 ### Passo 4:
-Já na pasta "net6.0" execute o comando abaixo via CMD para execução dos testes
+Já na pasta "net6.0" execute os comandos abaixo via CMD para execução dos testes
+
+Comando: git checkout master_execucao_local
 
 Comando: dotnet test ProjetoNilo.dll --logger "console;verbosity=detailed"
 
