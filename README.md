@@ -8,6 +8,12 @@ Link para download: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 ![image](https://user-images.githubusercontent.com/40321935/158284097-dd717450-08c9-47a6-b57e-a051e2e932fc.png)
 
+Instale o Git de acordo com a versão local do S.O.
+Link para download: https://git-scm.com/downloads
+
+![image](https://user-images.githubusercontent.com/40321935/158291076-52b15de0-4af1-4ae7-b25c-fd4029e99f2a.png)
+
+
 ### Passo 2:
 Crie no Disco C(Raiz) uma pasta com nome "Nilo";
 
