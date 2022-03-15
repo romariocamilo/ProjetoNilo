@@ -43,7 +43,7 @@ namespace ProjetoNilo.Auxiliares
         {
             var cpSenha = PesquisaAuxiliar.esperaImplicita.Until(condition => condition.FindElement(By.Id("reg_password")));
 
-            cpSenha.SendKeys(_emailUsuario);
+            cpSenha.SendKeys(_emailUsuario + "nilo2022@@@");
         }
 
 
